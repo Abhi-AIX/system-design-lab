@@ -12,11 +12,12 @@ A collection of hands-on projects for learning system design concepts and backen
 
 | Project | Description | Status |
 |---------|-------------|--------|
-| [netrace](./nettrace) | Health checks, client state, request tracing | ✅ Active |
+| [nettrace](./nettrace) | Health checks, client state, request tracing | ✅ Active |
 
 ## Quick Start
 
 ```bash
 cd <project-folder>
 mvn spring-boot:run
+
 

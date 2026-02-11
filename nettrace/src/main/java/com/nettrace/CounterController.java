@@ -11,7 +11,6 @@ public class CounterController {
     private int counter = 0;
 
     //add an endpoint that increments a counter and returns the current value of the counter and the timestamp in a JSON response
-    //stat
     @GetMapping("/counter")
     public Map<String, Object> getCounter() {
         counter++;

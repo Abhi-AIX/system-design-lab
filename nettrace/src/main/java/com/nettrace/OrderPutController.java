@@ -17,6 +17,7 @@ public class OrderPutController {
         public Map<String, Object> placeOrder(
                 @PathVariable("id") String id
         ) {
+            // Same key = same outcome
             orders.put(id, "CREATED");
             return Map.of("orderId", id, "status", orders.get(id), "timestamp", java.time.Instant.now());
         }

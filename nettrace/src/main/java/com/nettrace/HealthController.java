@@ -17,10 +17,15 @@ public class HealthController {
     @GetMapping("/health")
     public ResponseEntity<HealthResponse> healthCheck() {
 
+        //Request arrived at health check endpoint, checking health status
         HealthResponse response = new HealthResponse(isHealthy ? "UP" : "DOWN", java.time.Instant.now());
+
+        //response constructed
         return ResponseEntity
                 .status(isHealthy ? HttpStatus.OK : HttpStatus.SERVICE_UNAVAILABLE)
                 .body(response);
+        // 3. Spring/Tomcat serialize and send
+
     }
 
     @PostMapping("/health/down")
